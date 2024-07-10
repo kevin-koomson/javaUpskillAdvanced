@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.RecursiveTask;
 
-public class MatrixMultiplication extends RecursiveTask<List<List<Integer>>> {
+public class MatrixMultiplication {
     private final List<List<Integer>> matrixA;
     private final List<List<Integer>> matrixB;
 
@@ -14,8 +14,7 @@ public class MatrixMultiplication extends RecursiveTask<List<List<Integer>>> {
         this.matrixB = matrixB;
     }
 
-    @Override
-    protected List<List<Integer>> compute() {
+    public List<List<Integer>> compute() {
 //      obtain dimensions (order) of given matrices to multiply
         List<Integer> matrixAOrder = getMatrixOrder(matrixA);
         List<Integer> matrixBOrder = getMatrixOrder(matrixB);
